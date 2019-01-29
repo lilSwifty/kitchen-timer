@@ -1,24 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Alarms Tableview Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AlarmsTableviewController" customModule="KitchenTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJa-s4-sh3">
+                                <rect key="frame" x="323" y="37" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addNewAlarmButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8he-eN-UOU"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uTY-NG-mxC">
+                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="alarmsTableviewCell" rowHeight="72" id="qid-Ac-TgB" customClass="AlarmsTableViewCell" customModule="KitchenTimer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qid-Ac-TgB" id="8BR-rg-X3k">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-lO-ZtF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUb-xF-AcV">
+                                                            <rect key="frame" x="8" y="8" width="235" height="55.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw3-jD-qNF">
+                                                            <rect key="frame" x="266" y="8" width="101" height="55.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="101" id="UDi-hB-eAl"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="UUb-xF-AcV" firstAttribute="top" secondItem="PMK-lO-ZtF" secondAttribute="topMargin" id="FIY-Df-kwz"/>
+                                                        <constraint firstItem="UUb-xF-AcV" firstAttribute="firstBaseline" secondItem="Sw3-jD-qNF" secondAttribute="firstBaseline" id="LWT-CL-Bx9"/>
+                                                        <constraint firstItem="UUb-xF-AcV" firstAttribute="baseline" secondItem="Sw3-jD-qNF" secondAttribute="baseline" id="UH9-qU-d2e"/>
+                                                        <constraint firstItem="UUb-xF-AcV" firstAttribute="bottom" secondItem="PMK-lO-ZtF" secondAttribute="bottomMargin" id="Yvz-HS-8AF"/>
+                                                        <constraint firstItem="Sw3-jD-qNF" firstAttribute="trailing" secondItem="PMK-lO-ZtF" secondAttribute="trailingMargin" id="hHT-St-LTD"/>
+                                                        <constraint firstItem="UUb-xF-AcV" firstAttribute="leading" secondItem="PMK-lO-ZtF" secondAttribute="leadingMargin" id="re9-Q3-ne9"/>
+                                                        <constraint firstItem="Sw3-jD-qNF" firstAttribute="leading" secondItem="UUb-xF-AcV" secondAttribute="trailing" constant="23" id="xgG-Gt-91r"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="PMK-lO-ZtF" secondAttribute="trailing" id="1FB-Pd-mM4"/>
+                                                <constraint firstAttribute="bottom" secondItem="PMK-lO-ZtF" secondAttribute="bottom" id="49N-Ha-WfB"/>
+                                                <constraint firstItem="PMK-lO-ZtF" firstAttribute="leading" secondItem="8BR-rg-X3k" secondAttribute="leading" id="ZLE-FY-Nad"/>
+                                                <constraint firstItem="PMK-lO-ZtF" firstAttribute="top" secondItem="8BR-rg-X3k" secondAttribute="top" id="idM-in-64C"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="alarmView" destination="PMK-lO-ZtF" id="NeU-LM-RGu"/>
+                                            <outlet property="subjectLabel" destination="UUb-xF-AcV" id="zHN-4T-0yk"/>
+                                            <outlet property="timer" destination="Sw3-jD-qNF" id="U5H-5L-nce"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uTY-NG-mxC" secondAttribute="trailing" id="E8p-Kv-I0t"/>
+                            <constraint firstItem="KJa-s4-sh3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="HaC-n2-0zi"/>
+                            <constraint firstItem="uTY-NG-mxC" firstAttribute="top" secondItem="KJa-s4-sh3" secondAttribute="bottom" constant="23" id="RlI-Wd-vfg"/>
+                            <constraint firstItem="KJa-s4-sh3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="323" id="Zl4-uv-NbF"/>
+                            <constraint firstItem="uTY-NG-mxC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jHj-K3-MIp"/>
+                            <constraint firstItem="uTY-NG-mxC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oMg-wp-YI9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="uTY-NG-mxC" id="Axb-He-45w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
