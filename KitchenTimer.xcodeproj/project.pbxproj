@@ -14,6 +14,8 @@
 		53F909872200508D00A9D7DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F909852200508D00A9D7DE /* LaunchScreen.storyboard */; };
 		53F9098F2200514300A9D7DE /* AlarmsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F9098E2200514300A9D7DE /* AlarmsTableViewCell.swift */; };
 		53F909912200525200A9D7DE /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F909902200525200A9D7DE /* Alarm.swift */; };
+		53F90998220093FF00A9D7DE /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F90997220093FF00A9D7DE /* TimerViewController.swift */; };
+		53F9099A22019B5400A9D7DE /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F9099922019B5400A9D7DE /* Time.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		53F909882200508D00A9D7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53F9098E2200514300A9D7DE /* AlarmsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsTableViewCell.swift; sourceTree = "<group>"; };
 		53F909902200525200A9D7DE /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alarm.swift; path = ../../FoodTimer/FoodTimer/Alarm.swift; sourceTree = "<group>"; };
+		53F90997220093FF00A9D7DE /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		53F9099922019B5400A9D7DE /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +62,16 @@
 		53F9097B2200508C00A9D7DE /* KitchenTimer */ = {
 			isa = PBXGroup;
 			children = (
-				53F9098E2200514300A9D7DE /* AlarmsTableViewCell.swift */,
 				53F9097C2200508C00A9D7DE /* AppDelegate.swift */,
 				53F9097E2200508D00A9D7DE /* AlarmsTableviewController.swift */,
 				53F909902200525200A9D7DE /* Alarm.swift */,
+				53F9098E2200514300A9D7DE /* AlarmsTableViewCell.swift */,
+				53F90997220093FF00A9D7DE /* TimerViewController.swift */,
 				53F909802200508D00A9D7DE /* Main.storyboard */,
 				53F909832200508D00A9D7DE /* Assets.xcassets */,
 				53F909852200508D00A9D7DE /* LaunchScreen.storyboard */,
 				53F909882200508D00A9D7DE /* Info.plist */,
+				53F9099922019B5400A9D7DE /* Time.swift */,
 			);
 			path = KitchenTimer;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F9099A22019B5400A9D7DE /* Time.swift in Sources */,
+				53F90998220093FF00A9D7DE /* TimerViewController.swift in Sources */,
 				53F9097F2200508D00A9D7DE /* AlarmsTableviewController.swift in Sources */,
 				53F9098F2200514300A9D7DE /* AlarmsTableViewCell.swift in Sources */,
 				53F9097D2200508C00A9D7DE /* AppDelegate.swift in Sources */,

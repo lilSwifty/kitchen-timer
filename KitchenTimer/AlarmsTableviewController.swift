@@ -33,10 +33,10 @@ class AlarmsTableviewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableview.dequeueReusableCell(withIdentifier: "alarmsTableviewCell   ") as! AlarmsTableViewCell
+        let cell = tableview.dequeueReusableCell(withIdentifier: "alarmsTableviewCell") as! AlarmsTableViewCell
         
         cell.subjectLabel.text = alarms[indexPath.row].subject
-        cell.timer.text = String(alarms[indexPath.row].time)
+        cell.timer.text = "00:00:00"
         
         return cell
     }
@@ -44,20 +44,20 @@ class AlarmsTableviewController: UIViewController, UITableViewDelegate, UITableV
 
     
     @IBAction func addNewAlarmButton(_ sender: Any) {
-        let newAlarm = Alarm.init(subject: "Ägg", time: 10)
-        alarms.append(newAlarm)
-        setAlarm()
-        tableview.reloadData()
+//        let newAlarm = Alarm.init(subject: "Ägg", time: 10.00)
+//        alarms.append(newAlarm)
+//        setAlarm()
+//        tableview.reloadData()
     }
     
     func setAlarm(){
         let content = UNMutableNotificationContent()
-        content.title = "5 second alarm"
-        content.subtitle = "5 second alarm subtitle"
+        content.title = alarms[0].subject
+        content.subtitle = "Your \(alarms[0].subject) are done!"
         content.body = "Time to go!"
         content.badge = 0
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
         
         let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
