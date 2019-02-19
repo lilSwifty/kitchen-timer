@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		534A4375221AB0580052508F /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534A4374221AB0580052508F /* TimerHelper.swift */; };
 		53F9097D2200508C00A9D7DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F9097C2200508C00A9D7DE /* AppDelegate.swift */; };
 		53F9097F2200508D00A9D7DE /* AlarmsTableviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F9097E2200508D00A9D7DE /* AlarmsTableviewController.swift */; };
 		53F909822200508D00A9D7DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F909802200508D00A9D7DE /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		534A4374221AB0580052508F /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		53F909792200508C00A9D7DE /* KitchenTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KitchenTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F9097C2200508C00A9D7DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53F9097E2200508D00A9D7DE /* AlarmsTableviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmsTableviewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				53F909852200508D00A9D7DE /* LaunchScreen.storyboard */,
 				53F909882200508D00A9D7DE /* Info.plist */,
 				53F9099922019B5400A9D7DE /* Time.swift */,
+				534A4374221AB0580052508F /* TimerHelper.swift */,
 			);
 			path = KitchenTimer;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				53F90998220093FF00A9D7DE /* TimerViewController.swift in Sources */,
 				53F9097F2200508D00A9D7DE /* AlarmsTableviewController.swift in Sources */,
 				53F9098F2200514300A9D7DE /* AlarmsTableViewCell.swift in Sources */,
+				534A4375221AB0580052508F /* TimerHelper.swift in Sources */,
 				53F9097D2200508C00A9D7DE /* AppDelegate.swift in Sources */,
 				53F909912200525200A9D7DE /* Alarm.swift in Sources */,
 			);

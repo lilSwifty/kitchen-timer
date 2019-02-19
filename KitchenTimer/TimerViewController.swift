@@ -28,6 +28,7 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func saveTimer(_ sender: UIButton) {
+        print("alarm pressed")
         dismiss(animated: true)
     }
 }
